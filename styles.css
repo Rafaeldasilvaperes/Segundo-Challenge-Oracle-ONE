@@ -1,0 +1,137 @@
+/* CSS */
+
+:root {
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	--bg-main: #3b3b4b;
+	--text-pri: #b6b6b6;
+	--text-sec: #ececec;
+	--bg-pri: #23232e;
+	--bg-sec: #141418;
+	--bg-oracle: #fc6a03;
+	--oracle-sec: #ff8833;
+	--alura-pri: #0a72e9;
+	--alura-sec: #0758b5;
+	--linkedin-original: #0077B5;
+	--oracle-variation: #642a00;
+	
+}
+
+body{
+	box-sizing: border-box;
+	overflow-x: hidden;
+	background-color: var(--bg-pri);
+	color: var(--bg-oracle);
+}
+
+
+.container-inputs{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	width: 10%;
+}
+
+
+#entrada-input, #palavra-output, #letras-erradas{
+	margin-top: 10px;
+}
+
+
+.container-riscos{
+	margin-top: 3em;
+	margin-left: 1em;
+
+}
+
+.span-letra{
+	position: relative;
+	margin: 1rem;
+	text-align: center;
+}
+
+.span-letra::before{
+	content:"";
+	height: 3px;
+	width: 20px;
+	top: 100%;
+	left: -50%;
+	background-color: red;
+	position: absolute;
+
+}
+
+
+.caixa-erradas{
+	padding: 10px;
+	border: 2px solid red;
+}
+
+
+.container-erradas{
+	width: 30%;
+}
+
+.spline{
+	position: absolute;
+
+
+	z-index: -100;
+}
+
+.keyboard{
+  display: grid;
+  grid-template-columns: repeat(20, minmax(auto, 1.25em));
+  grid-auto-rows: 3rem;
+  gap: .25em;
+  justify-content: center;
+}
+
+.key{
+  font-size: inherit;
+  grid-column: span 2;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(
+    var(--hue, 200),
+    var(--saturation, 1%),
+    calc(var(--lightness-offset, 0%) + var(--lightness, 51%)));
+  color: white;
+  fill: white;
+  text-transform: uppercase;
+  border-radius: .25em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.key.large{
+  grid-column: span 3;
+}
+.spacer{
+	grid-column: span 1;
+	background-color: transparent;
+}
+
+
+.key:hover, .key:focus{
+  --lightness-offset: 10%;
+}
+.key:active{
+  border-color: hsl(210, 49%, 40%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

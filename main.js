@@ -9,6 +9,7 @@ import { perdeu } from "./perdeu.js";
 
 // Função Principal
 function verificaEntrada(evento) {
+  console.log(evento)
   if (ganhado) {
     teclada.blur();
   }

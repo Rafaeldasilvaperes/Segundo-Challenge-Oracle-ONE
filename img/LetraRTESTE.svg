@@ -1,0 +1,59 @@
+<svg width="73" height="95" viewBox="0 0 73 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="LetraR">
+<g id="MadeiraLetraRV" filter="url(#filter0_d_1_9)">
+<rect x="14" width="15" height="86" fill="#BA8C63"/>
+<rect x="15" y="1" width="13" height="84" stroke="black" stroke-width="2"/>
+</g>
+<g id="MadeiraLetraRH" filter="url(#filter1_d_1_9)">
+<rect x="66" y="3" width="15" height="62" transform="rotate(90 66 3)" fill="#BA8C63"/>
+<rect x="65" y="4" width="13" height="60" transform="rotate(90 65 4)" stroke="black" stroke-width="2"/>
+</g>
+<circle id="Prego1" cx="22" cy="14" r="1" fill="black"/>
+<circle id="Prego2" cx="22" cy="7" r="1" fill="black"/>
+<rect id="MadeirinhaLRCima" x="26.6996" y="38.4505" width="44.8272" height="6.22135" transform="rotate(-36.638 26.6996 38.4505)" fill="#996B43" stroke="black"/>
+<g id="MadeirinhaLRBaixo" filter="url(#filter2_d_1_9)">
+<rect x="24.4188" y="49" width="55.4325" height="5.71822" transform="rotate(36.7181 24.4188 49)" fill="#996B43"/>
+<rect x="24.5206" y="49.6997" width="54.4325" height="4.71822" transform="rotate(36.7181 24.5206 49.6997)" stroke="black"/>
+</g>
+<circle id="Prego3" cx="62" cy="15" r="1" fill="black"/>
+<g id="NosLetraR">
+<path id="LinhaNo4" d="M26.9268 35L27.9553 43.4979" stroke="#0B0A0A" stroke-width="3" stroke-linecap="round"/>
+<path id="LinhaNo3" d="M29.8821 35.7334L30.9107 44.2313" stroke="#0B0A0A" stroke-width="3" stroke-linecap="round"/>
+<line id="LinhaNo2" x1="25.9704" y1="41.0336" x2="14.1882" y2="38.7573" stroke="black" stroke-width="3" stroke-linecap="round"/>
+<line id="LinhaNo1" x1="25.9704" y1="38.0336" x2="14.1882" y2="35.7573" stroke="black" stroke-width="3" stroke-linecap="round"/>
+</g>
+<circle id="Prego4" cx="25" cy="53" r="1" fill="black"/>
+</g>
+<defs>
+<filter id="filter0_d_1_9" x="10" y="0" width="23" height="94" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_9"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_9" result="shape"/>
+</filter>
+<filter id="filter1_d_1_9" x="0" y="3" width="70" height="23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_9"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_9" result="shape"/>
+</filter>
+<filter id="filter2_d_1_9" x="17" y="49" width="55.8527" height="45.7255" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_9"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_9" result="shape"/>
+</filter>
+</defs>
+</svg>

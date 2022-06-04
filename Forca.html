@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="icon" href="/img/ForcaF.svg?" type="image/icon type">
-    <title>Jogo da Velha</title>
+    <title>Forca</title>
   </head>
-  <body>
-    <div class="wrapper1"> 
-    <div class="section-svgs">
+  <body >
+    <section id="blur" class="wrapper1"> 
+    <header id="svg-container" class="header-svgs">
       <!--Letra F-->
-      <svg class="FORCA" width="110" height="152" viewBox="0 0 110 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="FORCA" name="link" viewBox="0 0 110 152" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="ForcaF">
         <path id="CordaForca" d="M83.113 60.961C84.1571 60.0732 87.9417 55 89.6382 55C91.3348 55 92.9789 58.6331 95.1194 60.961C102.844 72.8576 101.674 77.2624 89.6382 81C71.2371 78.9707 82.069 61.8488 83.113 60.961Z" stroke="black" stroke-width="3"/>
         <rect id="Corda" x="88.5" y="11.5" width="2" height="38" fill="#020000" stroke="black"/>
@@ -71,9 +72,9 @@
         </filter>
         </defs>
         </svg>
-
+      
       <!--Letra O -->
-      <svg class="LetraOracle"  viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg id="Linko" name="link" class="LetraOracle" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="OracleO">
         <g id="LetraO" filter="url(#filter0_d_1_34)">
         <mask id="path-1-inside-1_1_34" fill="white">
@@ -98,10 +99,10 @@
         </filter>
         </defs>
         </svg>
-        
+      
         
       <!--Letra R-->
-      <svg width="73" height="95" viewBox="0 0 73 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="LetraR-class" name="link" viewBox="0 0 73 95" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="LetraR">
         <g id="MadeiraLetraRV" filter="url(#filter0_d_1_9)">
         <rect x="14" width="15" height="86" fill="#BA8C63"/>
@@ -162,21 +163,21 @@
         </svg>
       
       <!--Letra C-->
-      <svg width="63" height="62" viewBox="0 0 63 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="LetraC-class" name="link" viewBox="0 0 63 62" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="LetraC">
         <g id="MadeiraLetraCV" filter="url(#filter0_d_1_3)">
         <rect x="15.4186" width="11" height="54" fill="#996B43"/>
         <rect x="16.4186" y="1" width="9" height="52" stroke="black" stroke-width="2"/>
-        </g>
-        <g id="MadeiraLetraCCH" filter="url(#filter1_d_1_3)">
-        <rect x="57.7215" y="2.28979" width="9.54679" height="54" transform="rotate(84.1784 57.7215 2.28979)" fill="#BA8C63"/>
-        <rect x="56.8281" y="3.38607" width="7.54679" height="52" transform="rotate(84.1784 56.8281 3.38607)" stroke="black" stroke-width="2"/>
         </g>
         <g id="MadeiraLetraCBH" filter="url(#filter2_d_1_3)">
         <rect x="58.5643" y="44.0841" width="8.33918" height="54" transform="rotate(95.1252 58.5643 44.0841)" fill="#BA8C63"/>
         <rect x="57.479" y="44.9908" width="6.33918" height="52" transform="rotate(95.1252 57.479 44.9908)" stroke="black" stroke-width="2"/>
         </g>
         <circle id="PregoC2" cx="23.4186" cy="45" r="1" fill="black"/>
+        <g id="MadeiraLetraCCH" filter="url(#filter1_d_1_3)">
+          <rect x="57.7215" y="2.28979" width="9.54679" height="54" transform="rotate(84.1784 57.7215 2.28979)" fill="#BA8C63"/>
+          <rect x="56.8281" y="3.38607" width="7.54679" height="52" transform="rotate(84.1784 56.8281 3.38607)" stroke="black" stroke-width="2"/>
+          </g>
         <circle id="PregoC1" cx="19.4186" cy="11" r="1" fill="black"/>
         </g>
         <defs>
@@ -215,7 +216,7 @@
              
 
       <!--Letra A-->
-      <svg width="80" height="82" viewBox="0 0 80 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="LetraA-class" name="link" viewBox="0 0 80 82" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="AluraA">
         <g id="MadeiraLetraALeft" filter="url(#filter0_d_1_27)">
         <rect x="34.823" width="11" height="70.356" transform="rotate(18.0701 34.823 0)" fill="#1B6DCB"/>
@@ -266,9 +267,22 @@
         </filter>
         </defs>
         </svg>
-        
+      </header>
 
+      <!--Botão PLAY e botão Options-->
+      <div class="container-btns">
+        <button id="iniciar-btn" class="btn-play">Play</button>
+      <div id="config-btn" class="btn-config">
+        <img class="gears" src="/img/gear.svg" alt="">
       </div>
+    </div>
+
+    </section>
+    <!--POPUP OPTIONS-->
+    <div id="popup">
+      <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quo facere fugit debitis aliquid laborum voluptas suscipit itaque magni iusto quasi laudantium numquam accusamus sed, optio cumque obcaecati ullam facilis.</p>
+      <button id="close" class="btn-play">Close</button>
     </div>
     <div class="wrapper2"></div>
     <div class="wrapper3"></div>
@@ -286,14 +300,14 @@
     </div>
     <div class="container-riscos" id="container-certas">
 
-
+    
     </div>
     <div class="container-riscos container-erradas" id="container-erradas">
       <div class="caixa-erradas" id="caixa-erradas-saida"></div>
     </div>
 
-    <button id="iniciar-btn" class="iniciar-btn-style">INICIAR</button>
-
+    
+  
     <div data-keyboard class="keyboard">
       <button class="key" data-key="Q">Q</button>
       <button class="key" data-key="W">W</button>

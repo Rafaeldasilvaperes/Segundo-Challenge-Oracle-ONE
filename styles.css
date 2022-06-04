@@ -1,4 +1,7 @@
 /* CSS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=New+Rocker&family=Noto+Sans+SC:wght@500&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 
 :root {
 	font-size: 16px;
@@ -14,43 +17,170 @@
 	--alura-sec: #0758b5;
 	--linkedin-original: #0077B5;
 	--oracle-variation: #642a00;
+}
+
+
+::-webkit-scrollbar{
+	width: 0.75rem;
+}
+
+::-webkit-scrollbar-track{
+	background: #141418;
 	
 }
+::-webkit-scrollbar-thumb{
+	background: var(--bg-oracle);
+	border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb:hover{
+	background: #fe8631;
+}
+
+@supports(scrollbar-color: red blue){
+	*{
+		scrollbar-color: #141418 #fc6a03;
+		scrollbar-width: thin;
+
+	}
+}
+
+
 
 body{
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 	overflow-x: hidden;
-	background-color: var(--bg-pri);
+	-webkit-background-image: linear-gradient(to bottom right, #3b3b4b, #000000);
+	-moz-background-image: linear-gradient(to bottom right, #3b3b4b, #000000);
+	-o-background-image: linear-gradient(to bottom right, #3b3b4b, #000000);
+	background-image: linear-gradient(to bottom right, #3b3b4b, #000000);
 	color: var(--bg-oracle);
 	height: 400vh;
+	width: 100%;
+	
+}
+/**/
+.container-btns{
+
+	min-width: 100%;
+	min-height: 8%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8%;
+}
+
+.btn-play{
+	appearance: none;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+	width: 15%;
+	min-width: 175px;
+	height: 100%;
+
+	border: 1px solid var(--bg-oracle);
+	border-radius: 8px;
+	color: white;
+	font-size: 30px;
+	
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Noto Sans SC', sans-serif;
+	font-family: 'New Rocker', cursive;
+	transition: 0.25s;
+	background-image: linear-gradient(to right, var(--bg-oracle) 50%, transparent 50% );
+	background-size: 200%;
+	background-position: 100%;
+}
+.btn-play:hover{
+	background-position: 0%;	
+}
+.btn-play:active{
+	color: var(--bg-oracle);
+	background: white;
+}
+.btn-play:focus{
+	background: var(--bg-oracle);
+}
+.gears{
+	cursor: pointer;
+	width: 45px;
+	min-width: 20px;
+	transition: 0.25s;
+}
+.gears:hover{
+	animation: girando 1s linear infinite, cores 1s linear infinite;
+	width: 55px;
+}
+
+/**/
+#blur.active{
+	filter: blur(20px);
+	pointer-events: none;
+	user-select: none;
+}
+#popup{
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	padding: 50px;
+	box-shadow: 0 5px 30px rgba(0,0,0,0.30);
+	background-color: black;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+}
+#popup.active{
+	top: 40%;
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s; 
 }
 
 .wrapper1, .wrapper2, .wrapper3{
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
+	padding: 0;
+	margin: 0;
 }
 
 .wrapper1{
 	display: flex;
+	flex-direction: column;
+	align-content: space-around;
 	justify-content: center;
 	align-items: center;
+	gap: 10%;
+}
+.header-svgs{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: 70%;
 	
+	margin-bottom: 5%;
 }
 
-.section-svgs{
-	
-	
-}
+
+
 /* ORACLE O */
-.section-svgs svg:nth-child(2){
-	margin-left: -2em;
+.header-svgs svg:nth-child(2){
+	margin-left: -5%;
 	transition: all 0.5s ease-in-out;
 }
 .LetraOracle{
-	width: 59px;
-	height: 59px;
+	width: 19.2%;
+	-webkit-animation: girando 0.75s linear infinite, cores 1s linear infinite;
+	-moz-animation: girando 0.75s linear infinite, cores 1s linear infinite;
+	-o-animation: girando 0.75s linear infinite, cores 1s linear infinite;
 	animation: girando 0.75s linear infinite, cores 1s linear infinite;
 	transform-origin: center;
+	
 }
 .LetraOracle:hover{
 	animation: girando 1s linear infinite, cores 0.6s linear infinite;
@@ -90,27 +220,14 @@ body{
 		transform: rotateZ(360deg) scaleY(0.99) scaleX(0.99);
 	}
 }
+
 /* FIM LETRA O */
 
-
-/* FORCA F */
-/* #Line1, #Line2, #Line3{
-	stroke: black;
-}
-#Corda{
-	fill: black;
-	stroke: black;
-}
-#CordaForca {
-	stroke-width: 3;
-	stroke: black;
-} */
 
 /* Animação corda Forca */
 #CordaForca, #Line1, #Line2, #Line3, #Corda{
 	transition: all 0.5s ease-in-out;
 }
-
 svg:hover #CordaForca{
 	stroke:#fc6a03;
 }
@@ -170,12 +287,13 @@ svg:active #Corda{
 		transform: translateY(0);
 	}
 }
+/* FIM CORDA FORCA */
 
+
+/* Animação Forca F */
 .FORCA{
-	height: 152px;
-	width: 110px;
+	width: 26.2%;
 }
-
 .FORCA:active{
 	animation: forcaQuebrada 1s linear forwards;
 }
@@ -190,10 +308,165 @@ svg:active #Corda{
 	fill: #fc6a03;
 	animation: cores 0.5s linear infinite;
 }
+/* FIM FORCA F */
 
 
+/* Animação R */
+.LetraR-class{
+	width: 19.2%;
+}
+#LinhaNo1, #LinhaNo2, #LinhaNo3, #LinhaNo4{
+	transition: all 0.5s ease-in-out;
+}
 
+svg:hover #LinhaNo1{
+	stroke:#fc6a03;
+	
+}
+svg:hover #LinhaNo2{
+	stroke:#fc6a03;
+	
+}
+svg:hover #LinhaNo3{
+	stroke:#fc6a03;
+	
+}
+svg:hover #LinhaNo4{
+	stroke:#fc6a03;
+}
+@keyframes coresR {
+  0% { stroke: #cb5603; }
+  25% { stroke: #dd6e20; }
+  50% { stroke: #e1935b; }
+  75% { stroke: #dd6e20; }
+  100% { stroke: #cb5603; }
+}
 /**/
+svg:hover #MadeirinhaLRBaixo{
+	animation: madeirinhaBaixo 2s ease forwards;
+	transform-origin: top;
+	transform-box: fill-box;
+}
+@keyframes madeirinhaBaixo{
+	25%{
+		transform: rotateZ(-30deg) translateX(-5px) translateY(-10px);
+	}
+	50%{
+		transform: rotateZ(0deg) translateX(0px) translateY(0px);
+	}
+	75%{
+		transform: rotateZ(-30deg) translateX(-5px) translateY(-10px);
+	}
+	100%{
+		transform: rotateZ(0deg) translateX(0px) translateY(0px);
+	}
+}
+svg:hover #Prego4{
+	animation: prego4 2s ease;
+}
+@keyframes prego4{
+	25%{
+		transform: translateY(3px) translateX(-4px);
+	}
+	50%{
+		transform: translateY(0px) translateX(0px);
+	}
+	75%{
+		transform: translateY(3px) translateX(-4px);
+	}
+	100%{
+		transform: translateY(0px) translateX(0px);
+	}
+}
+/* FIM R */
+
+
+/* Animação C */
+.LetraC-class{
+	width: 16.2%;
+}
+svg:hover #MadeiraLetraCCH{
+	animation: MadeiraLetraCCH 2s ease forwards;
+	transform-origin: 34% 43%;
+	transform-box: fill-box;
+	z-index: 100;
+}
+@keyframes MadeiraLetraCCH{
+	25%{
+		transform: rotateZ(110deg) translateX(20%);
+	}
+	50%{
+		transform: rotateZ(90deg) translateX(20%);
+	}
+	75%{
+		transform: rotateZ(99deg) translateX(20%);
+	}
+	80%{
+		transform: rotateZ(95deg) translateX(20%);
+	}
+}
+@keyframes shake {
+  5%{
+    transform: translate3d(-3px, 0, 0);
+  }
+  6%{
+    transform: translate3d(4px, 0, 0);
+  }
+  7%{
+    transform: translate3d(-6px, 0, 0);
+  }
+  8%{
+    transform: translate3d(6px, 0, 0);
+  }
+	9%{
+    transform: translate3d(-6px, 0, 0);
+  }
+	10% {
+    transform: translate3d(6px, 0, 0);
+  }
+	11%{
+    transform: translate3d(-6px, 0, 0);
+  }
+	12% {
+    transform: translate3d(4px, 0, 0);
+  }
+	13%{
+    transform: translate3d(-3px, 0, 0);
+  }
+	14%{
+		transform: translate3d(0px, 0, 0);
+	}
+	100%{
+		transform: translate3d(0px, 0, 0);
+	}
+}
+/* FIM C */
+
+
+/* Animação Alura A */
+.LetraA-class{
+	width: 19.2%;
+	animation: shake 2s linear infinite;
+}
+svg:hover #AluraA{
+	animation: coresA 0.5s infinite;
+}
+svg:active #AluraA{
+	animation: coresR 0.5s infinite, borracha 0.5s ease-in forwards;
+	transform-origin: center;
+}
+
+@keyframes coresA {
+  0% { fill: #0758b5; }
+  25% { fill: #0968d5; }
+  50% { fill: #0a76f1; }
+  75% { fill: #0968d5; }
+  100% { fill: #0758b5; }
+}
+/* FIM A */
+
+
+
 .container-inputs{
 	display: flex;
 	flex-direction: column;
@@ -204,7 +477,7 @@ svg:active #Corda{
 
 
 #entrada-input, #palavra-output, #letras-erradas{
-	margin-top: 10px;
+	margin-top: 0.625em;
 }
 
 .display-flex{
@@ -233,7 +506,7 @@ svg:active #Corda{
 
 .span-letra::before{
 	content:"";
-	height: 3px;
+	height: 0.1875em;
 	width: 1.5em;
 	top: 240%;
 	left: 0%;
@@ -244,8 +517,8 @@ svg:active #Corda{
 
 
 .caixa-erradas{
-	padding: 10px;
-	border: 2px solid red;
+	padding: 0.625em;
+	border: 0.125em solid red;
 }
 
 
@@ -255,8 +528,6 @@ svg:active #Corda{
 
 .spline{
 	position: absolute;
-
-
 	z-index: -100;
 }
 
@@ -302,16 +573,3 @@ svg:active #Corda{
 .key:active{
   border-color: hsl(210, 49%, 40%);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

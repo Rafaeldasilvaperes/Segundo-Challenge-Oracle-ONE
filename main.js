@@ -6,10 +6,11 @@ import { escolhedorDePalavras } from "./escolhedorDePalavras.js";
 import { ganhou } from "./ganhou.js";
 import { geradorDePalavras } from "./geradorDePalavras.js";
 import { perdeu } from "./perdeu.js";
+import { LinkClick } from "./Links.js";
 
 // Função Principal
 function verificaEntrada(evento) {
-  console.log(evento)
+  console.log(evento);
   if (ganhado) {
     teclada.blur();
   }
@@ -69,12 +70,39 @@ document.getElementById("iniciar-btn").addEventListener(
   { once: true }
 );
 
-// event listeners
+// event listeners entrada e saida
 window.erradas = document.getElementById("letras-erradas");
 window.teclada = document.getElementById("entrada-input");
 
 teclada.addEventListener("keydown", verificaEntrada, false);
 window.addEventListener("keydown", verificaEntrada, false);
+
+// event listen links svg (0,1,4)
+window.link = document.getElementById("svg-container");
+link.addEventListener("click", LinkClick, false);
+//
+
+var blur1 = document.getElementById('config-btn')
+blur1.addEventListener("click",function(){
+  var blur = document.getElementById('blur')
+  blur.classList.toggle('active');
+  var pop = document.getElementById('popup')
+  pop.classList.toggle('active')
+})
+
+var close = document.getElementById('close')
+close.addEventListener("click", function(){
+  var blur = document.getElementById('blur')
+  blur.classList.toggle('active');
+  var pop = document.getElementById('popup')
+  pop.classList.toggle('active')
+})
+
+
+
+
+
+
 
 // entrada pelo teclado virtual
 document.addEventListener("click", function (evento) {

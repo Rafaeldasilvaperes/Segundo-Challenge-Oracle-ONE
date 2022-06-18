@@ -1,0 +1,29 @@
+<svg width="200" height="243" viewBox="0 0 200 243" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ForcaF">
+<path class="CordaForcaRedonda" d="M152.165 102.872C154.121 101.373 161.209 92.8125 164.386 92.8125C167.563 92.8125 170.643 98.9433 174.651 102.872C189.118 122.947 186.927 130.38 164.386 136.688C129.924 133.263 150.21 104.37 152.165 102.872Z" stroke="black" stroke-width="3"/>
+<rect id="CordaVertical" x="161.818" y="19.0625" width="4.6185" height="64.8125" fill="#020000" stroke="black"/>
+<g class="ForcaNos">
+<path id="Linha3" d="M155.699 97.875L170.682 92.8125" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path id="Linha2" d="M155.699 87.75L170.682 82.6875" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path id="Linha1" d="M155.699 92.8125L170.682 87.75" stroke="black" stroke-width="4" stroke-linecap="round"/>
+</g>
+<rect class="ForcaMadeiraCruzada" x="0.733643" y="0.10728" width="81.9018" height="11.6788" transform="matrix(0.830732 -0.556673 0.636553 0.771233 43.3854 75.2696)" fill="#996B43" stroke="black"/>
+<g id="ForcaTopHorizontal" filter="url(#filter0_d_11_19)">
+<rect x="4" y="15.1875" width="191.029" height="27" fill="#BA8C63"/>
+<rect x="5" y="16.1875" width="189.029" height="25" stroke="black" stroke-width="2"/>
+</g>
+<rect class="ForcaBaseVertical" x="25.6012" y="1" width="33.5838" height="241" fill="#BA8C63" stroke="black" stroke-width="2"/>
+</g>
+<defs>
+<filter id="filter0_d_11_19" x="0" y="15.1875" width="199.029" height="35" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_11_19"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_11_19" result="shape"/>
+</filter>
+</defs>
+</svg>

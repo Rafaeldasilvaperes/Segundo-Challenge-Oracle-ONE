@@ -12,3 +12,5 @@ export function LinkClick(e) {
     window.open("https://www.alura.com.br/");
   }
 }
+var link = document.getElementById("svg-container");
+link.addEventListener("click", LinkClick, false);

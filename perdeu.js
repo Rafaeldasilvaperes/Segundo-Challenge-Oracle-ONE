@@ -1,5 +1,7 @@
+import { blockClick } from "./botaoClicked.js";
+
 export function perdeu(array) {
-  if (array.length < 5) {
+  if (array.length < 10) {
     return;
   } else {
     var perdeu = document.getElementById("palavra-output");
@@ -7,6 +9,7 @@ export function perdeu(array) {
     perdeu.value = msg;
     ganhado = true;
     teclada.setAttribute("readonly", false);
+    blockClick();
     return;
   }
 }

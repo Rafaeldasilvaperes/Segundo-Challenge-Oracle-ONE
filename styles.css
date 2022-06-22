@@ -230,6 +230,26 @@ body{
 	font-style: italic;
 }
 
+.errorPopup{
+	position: fixed;
+	z-index: 99999902;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	
+	color: white;
+	padding: 1%;
+	text-align: center;
+
+
+
+	opacity: 0.8;
+	background-color: black;
+	border-radius: 500px;
+	transition: 0.5s;
+}
+
+
 
 /* MEDIA MIN 1000 */
 @media screen and (min-width: 1000px) {
@@ -790,6 +810,7 @@ svg:active #AluraA{
 	align-items: center;
 	justify-content: space-around;
 	color: #000000;
+	
 }
 
 .SVGFINAL{
@@ -802,7 +823,7 @@ svg:active #AluraA{
 
 .nav-wrapper4{
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 
@@ -828,8 +849,9 @@ svg:active #AluraA{
 	background-color: #30303b;
 	text-align: center;
 	word-wrap: break-word;
-	opacity: 0;
+	opacity: 0.7;
 	transition: all 2s;
+
 
 	border-radius: 5px;
 
@@ -844,15 +866,15 @@ svg:active #AluraA{
 	-o-box-shadow: 10px 10px 20px rgba(0,0,0,0.80);
 	box-shadow: 10px 10px 20px rgba(0,0,0,0.80);
 }
-.caixa-erradas-visible{
-	opacity: 0.7;
+.caixa-erradas-notvisible{
+	opacity: 0;
 }
 
 .span-letra{
 	position: relative;
 	height: clamp(0.2rem, 0.6vw, 0.8rem);
 	width: clamp(1rem, 5vw, 4rem);
-	margin: clamp(0.2rem, 1vw, 2rem);
+	margin: clamp(0.5rem, 1vw, 2rem);
 	text-align: center;
 	font-size: clamp(1rem, 5vw, 4rem);
 
@@ -863,11 +885,11 @@ svg:active #AluraA{
 	font-family: 'Lakki Reddy', cursive;
 	color: var(--bg-oracle);
 	transition: all 2s;
-	opacity: 0;
+	opacity: 1;
 
 }
-.span-letra-visible{
-	opacity: 1;
+.span-letra-notvisible{
+	opacity: 0;
 }
 
 .span-letra::before{
@@ -883,32 +905,6 @@ svg:active #AluraA{
 
 }
 
-.Corda,
-.MadeirinhaLateral,
-.MadeiraHorizontal,
-.RecTOP,
-.RecRIGHT,
-.RecMIDDLE,
-.RecLEFT{
-	animation: aoErrar 0.5s ease-in;
-	filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-}
-.RafaelPeres{
-	filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-}
-.MadeiraVertical{
-	animation: aoErrar 0.5s ease-in;
-}
-
-.erro1,.erro2,.erro3,.erro4,.erro5,.erro6,.erro7,.erro8,.erro9,.erro10{
-	display: none;
-}
-@keyframes aoErrar{
-	from{
-		opacity: 0;
-	}
-}
-
 .nav-wrapper4{
 	display: flex;
 	justify-content: space-around;
@@ -921,13 +917,19 @@ svg:active #AluraA{
 	overflow-x: hidden;
 	align-self: center;
 	background-image: linear-gradient(to bottom right, #3b3b4b, #000000);
-	opacity: 0;
+	opacity: 1;
 	transition: all 2s;
 }
-.nav-wrapper4-visible{
-	opacity: 1;
-}
 
+.nav-wrapper4-notvisible{
+	opacity: 0;
+}
+.score{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
 .score h3{
 	font-size: clamp(1em, 2vw, 2em);
 	margin: 0;
@@ -936,15 +938,12 @@ svg:active #AluraA{
 
 .titulo-game-wrapper4 h2{
 	margin: 0;
+	
 }
 .FORCA-wrapper4{
 	width: clamp(10rem, 15vw, 15rem);
 }
-.score{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+
 .score-svg{
 	width: clamp(5rem, 10vw, 10rem);
 	margin: 0;
@@ -953,12 +952,109 @@ svg:active #AluraA{
 	width: clamp(1em, 2vw, 2em);
 	cursor: pointer;
 	transition: 0.05s;
+	
 }
 .gears-wrapper4:active{
 	transform: scale(1.5);
 }
+.Corda,
+.MadeirinhaLateral,
+.MadeiraHorizontal,
+.RecTOP,
+.RecRIGHT,
+.RecMIDDLE,
+.RecLEFT{
+	animation: aoErrar 0.5s ease-in;
+	filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+	
+}
+.RafaelPeres{
+	filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+.MadeiraVertical{
+	animation: aoErrar 0.5s ease-in;
+}
+
+.erro1,.erro2,.erro3,.erro4,.erro5,.erro6,.erro7,.erro8,.erro9,.erro10{
+	display: none;
+	
+}
+@keyframes aoErrar{
+	from{
+		opacity: 0;
+	}
+}
 
 
+/**/
+/**/
+#blur-wrapper4.active{
+	filter: blur(20px);
+	pointer-events: none;
+	user-select: none;
+}
+#keyboard-id.active{
+	display: none;
+}
+
+
+.ganhou{
+	position: fixed;
+	z-index: 999999;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+
+	justify-content: space-around;
+	color: white;
+	font-size: clamp(3em, 5vw, 4rem);
+	text-align: center;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+
+	padding: 10%;
+	height: 30%;
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: orangered;
+	/* animation: coresPlay 1s infinite; */
+	border-radius: 15px;
+	visibility: hidden;
+	opacity: 0;
+}
+.ganhou-visible{
+	visibility: visible;
+	opacity: 1;
+}
+.btn-winlose{
+	
+	appearance: none;
+	background-color: whitesmoke;
+	outline: none;
+	cursor: pointer;
+	min-width: 15%;
+	padding: 5%;
+	border-radius: 8px;
+	color: var(--bg-oracle);
+	
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Noto Sans SC', sans-serif;
+	font-family: 'New Rocker', cursive;
+	transition: 0.25s;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.80);
+}
+.WinOrLose{
+	margin: 0;
+}
+.pontuacao-ganhou-classe{
+	font-size: 0.4em;
+	margin-bottom: 30%;
+	padding: 0;
+
+}
+/**/
+/**/
 
 /* ======================================== KEYBOARD PARA MOBILE ======================================== */
 
@@ -968,7 +1064,7 @@ svg:active #AluraA{
 	display: none;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) and (max-width: 500px){
 	.nav-wrapper4{
 		margin-top: -1.5rem;
 	}

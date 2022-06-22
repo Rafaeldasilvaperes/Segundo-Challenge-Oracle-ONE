@@ -1,16 +1,24 @@
 export function checaFinalDePagina(){
+
+
+  if(scrolled == false){
   if ((window.innerHeight + window.scrollY + 100) >= document.body.scrollHeight) {
     var headerWrapper4 = document.querySelector('.nav-wrapper4');
     var caixaErradas = document.querySelector('.caixa-erradas');
-    var riscosLetrasCertas = document.querySelectorAll('.span-letra');
-    headerWrapper4.classList.add('nav-wrapper4-visible');
-    caixaErradas.classList.add('caixa-erradas-visible');
+   
+    headerWrapper4.classList.remove('nav-wrapper4-notvisible');
+    caixaErradas.classList.remove('caixa-erradas-notvisible');
     
-    riscosLetrasCertas.forEach((item) => {
-      item.classList.add('span-letra-visible');
-    })
+    
+    scrolled = true;
+    
+    return
     }
-  };
+    
+  }
+  
+};
 
+var scrolled = false;
 window.addEventListener('scroll', checaFinalDePagina, false) 
   

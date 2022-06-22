@@ -1,4 +1,7 @@
 import { blockClick } from "./botaoClicked.js";
+import { limpador } from "./limpador.js";
+import { limpadorSVGErradas } from "./adicionaSVGaoErrar.js";
+import { popupWinOrLose } from './ganhouOuPerdeuPopup.js'
 
 export function perdeu(array) {
   if (array.length < 10) {
@@ -10,6 +13,9 @@ export function perdeu(array) {
     ganhado = true;
     teclada.setAttribute("readonly", false);
     blockClick();
+    popupWinOrLose("PERDEU!","P");
+    limpador()
+    console.log("PERDEU")
     return;
   }
 }

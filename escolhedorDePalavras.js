@@ -15,11 +15,12 @@ function organizadorDeTexto(texto) {
     
 
     for (var i in textSplit) {
-      if (textSplit[i].length < 5) {
+      
+      if (textSplit[i].length < 5 || textSplit[i].length > 12) {
         textSplit.splice(i, 1, "");
-        
       }
     }
+    
     var valor = "";
     textSplit = textSplit.filter(function (item) {
       return item !== valor;
@@ -30,5 +31,6 @@ function organizadorDeTexto(texto) {
     }
     
     return textSplit;
-  }
+  }else{return}
+  
 }

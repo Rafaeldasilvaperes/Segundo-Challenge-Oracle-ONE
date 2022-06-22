@@ -281,24 +281,7 @@
 
     </section>
     <!--FIM WRAPPER 01-->
-
-    <!--POPUP OPTIONS-->
-    <div id="popup" class="popup-class">
-      <h2>Opções</h2>
-      <h3>Texto:</h3>
-      <ul>
-        <li>Você pode preencher o campo com um texto de sua escolha;</li>
-        <li>Serão retiradas palavras de no mínimo 5 letras deste texto de forma aleatória;</li>
-        <li>Nomes e Sobrenomes também poderão ser inclusos;</li>
-      </ul>
-      <textarea class="entrada-texto-opcional" placeholder="Entre com o seu texto" cols="15" rows="5"></textarea>
-      <div class="container-btn-popup">
-      <button id="close" class="btn-play fechar-btn">Fechar</button>
-      <button id="btn-done" class="btn-play done-btn">Feito</button>
-      </div>
-    </div>
-    <!---->
-
+    
     <!--WRAPPER 02-->
     <section class="wrapper2">
         <h2><span class="oracle-text"><h2>Oracle ONE</h2></span>Oracle Next Education</h2>
@@ -307,6 +290,7 @@
         <div class="alura-parallax"><a class="img-link" href="https://www.alura.com.br/" target="_blank"></a></div>
     </section>
     <!--FIM WRAPPER 02-->
+    
 
     <!--WRAPPER 03-->
     <div class="wrapper3">
@@ -321,7 +305,7 @@
     <!--FIM WRAPPER 03-->
 
     <!--WRAPPER 04-->
-    <main class="wrapper4">
+    <main id="blur-wrapper4" class="wrapper4">
       <!--SVG PAISAGEM FINAL-->
       
 
@@ -1445,11 +1429,11 @@
 
       <!--FINAL SVG PAISAGEM FINAL-->
 
-      <div class="container-wrapper-4">
+      <div  class="container-wrapper-4">
        
       <div class="organizador-objetos-dentro-wrapper-4">
         <!--PONTUAÇÃO E ETC-->
-        <div class="nav-wrapper4">
+        <div class="nav-wrapper4 nav-wrapper4-notvisible">
           <h2 class="score">
             <img class="score-svg" src="./img/score-svg.svg" alt="Forca">
             <span class="pontuador" id="pontuador">0</span>
@@ -1470,7 +1454,7 @@
     
       <!--CONTAINER ERRADAS-->
       
-        <div class="caixa-erradas" id="caixa-erradas-saida">
+        <div class="caixa-erradas caixa-erradas-notvisible" id="caixa-erradas-saida">
         <!--Spans vão aqui dentro-->
         </div>
       <!---->
@@ -1482,11 +1466,11 @@
             <!--Spans vão aqui dentro-->
             </div>
         <!---->
-    
+            
       </div>
     </div>
   <!--KEYBOARD para MOBILE-->
-  <div class="container-keyboard">
+  <div id="keyboard-id" class="container-keyboard">
     <div  class="keyboard">
       <button class="key" data-key="W">W</button>
       <button class="key" data-key="E">E</button>
@@ -1524,9 +1508,37 @@
   
     
 </div>
-
+<!-- POPUP WIN LOSE-->
+<div id="popup-winlose" class="ganhou">
+  <h3 id="WinOrLose" class="WinOrLose"></h3>
+  <h2 id="pontuacao-ganhou"></h2>
+  <div class="container-btn-popup">
+    <button id="reiniciar-winlose" class="btn-winlose">Reiniciar</button>
+    <button id="continuar-winlose" class="btn-winlose">Continuar</button>
+  </div>
+</div>
+<!-- -->
   </main>
+  
   <!--FIM WRAPPER 04-->
     <!-- <script type="module" src="main.js"></script> -->
+
+    <!--POPUP OPTIONS-->
+    <div id="popup" class="popup-class">
+      <h2>Opções</h2>
+      <h3>Texto:</h3>
+      <ul>
+        <li>Você pode preencher o campo com um texto de sua escolha;</li>
+        <li>Serão retiradas palavras de no mínimo 5 e no máximo 12 letras deste texto de forma aleatória;</li>
+        <li>Nomes e Sobrenomes também poderão ser inclusos;</li>
+        <li>Caso campo fique em branco, será usado um texto default;</li>
+      </ul>
+      <textarea class="entrada-texto-opcional" placeholder="Entre com o seu texto" cols="15" rows="5"></textarea>
+      <div class="container-btn-popup">
+      <button id="close" class="btn-play fechar-btn">Fechar</button>
+      <button id="btn-done" class="btn-play done-btn">Feito</button>
+      </div>
+    </div>
+    <!---->
   </body>
 </html>

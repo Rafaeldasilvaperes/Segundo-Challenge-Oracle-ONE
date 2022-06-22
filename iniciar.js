@@ -8,6 +8,7 @@ export function iniciar() {
   if(!called){
     clicked()
     called = true;
+    ganhado = false;
     geradorDePalavras(escolhedorDePalavras(textoTeste));
     bodyScroll()
   }else{

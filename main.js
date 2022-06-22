@@ -4,14 +4,15 @@ import { adicionadorLetraCerta } from "./adicionadorLetraCerta.js";
 import { adicionaLetrasErradas } from "./adicionaLetrasErradas.js";
 import { ganhou } from "./ganhou.js";
 import { perdeu } from "./perdeu.js";
-import { LinkClick } from "./Links.js";
-import { opcoes, abreFecha } from "./opcoes.js";
+import { opcoes } from "./opcoes.js";
 import { iniciar } from "./iniciar.js";
-import { salvar } from './salvar.js';
+// import { salvar } from './salvar.js';
 import { textoDefault } from './textoDefault.js'
 import { geradorDeSVG } from './adicionaSVGaoErrar.js'
 import { checaFinalDePagina } from './checaFinalDePagina.js'
 import { score } from './score.js'
+
+
 
 
 
@@ -50,12 +51,14 @@ function verificaEntrada(evento) {
         adicionaLetrasErradas(char);
         console.log(letrasErradas);
         perdeu(letrasErradas);
+        return
       }
 
       if (palavraDaVez == arr.join("")) {
-        console.log(palavraDaVez);
-        console.log(arr.join(""));
+        console.log("palavradavez: ",palavraDaVez);
+        console.log("arr: ",arr.join(""));
         ganhou();
+        return
       }
     }
   }
@@ -75,9 +78,12 @@ window.called = false;
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
+//
+
+//
 
 // Inicializador
-iniciar;
+// iniciar;
 
 // Checa final de página e mostra header do 4° Wrapper
 checaFinalDePagina();
@@ -110,7 +116,7 @@ document.addEventListener("click", function (evento) {
 
 // event listener Opções toggle 
 opcoes;
-abreFecha;
+
 
 
 

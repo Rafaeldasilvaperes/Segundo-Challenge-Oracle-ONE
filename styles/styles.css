@@ -636,7 +636,7 @@ svg:active #AluraA{
 	min-width: 0;
 	
 	align-self: center;
-	background-image: url('./img/Oracle-img.png');
+	background-image: url('../img/Oracle-img.png');
 	background-attachment: local;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -681,7 +681,7 @@ svg:active #AluraA{
 	width: 98%;
 	align-self: center;
 
-	background-image: url('./img/Alura-img.png');
+	background-image: url('../img/Alura-img.png');
 	background-attachment:local;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -749,7 +749,7 @@ svg:active #AluraA{
 		height: 0;
 		min-height: 80%;
 		top: 0;
-		background-image: url(./img/estrelas.svg);
+		background-image: url(../img/estrelas.svg);
 		background-repeat: no-repeat;
 		align-self: flex-end;
 		background-size: cover;
@@ -1041,8 +1041,8 @@ svg:active #AluraA{
 	font-family: 'Montserrat', sans-serif;
 	font-family: 'Noto Sans SC', sans-serif;
 	font-family: 'New Rocker', cursive;
-	transition: 0.25s;
-	box-shadow: 0 10px 30px rgba(0,0,0,0.80);
+	
+	
 }
 .WinOrLose{
 	margin: 0;
@@ -1064,7 +1064,7 @@ svg:active #AluraA{
 	display: none;
 }
 
-@media screen and (max-width: 1000px) and (max-width: 500px){
+@media screen and (max-width: 1000px){
 	.nav-wrapper4{
 		margin-top: -1.5rem;
 	}

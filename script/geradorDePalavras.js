@@ -1,7 +1,6 @@
 export function geradorDePalavras(palavra) {
   if(!palavra){return}
   palavraDaVez = palavra.toUpperCase();
-  console.log("Palavra da vez: " + palavra);
   arr = ArrayParaPalavra();
   for (var palavra in palavraDaVez) {
     var pai = document.getElementById("container-certas");

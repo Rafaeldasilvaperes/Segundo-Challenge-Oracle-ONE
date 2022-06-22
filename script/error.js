@@ -3,7 +3,7 @@ export function error(errorText){
     var Body = document.querySelector('body')
     erroSpan.classList.add('errorPopup')
     erroSpan.textContent = errorText;
-    console.log(erroSpan)
+    
     Body.appendChild(erroSpan)
   setTimeout(function(){
     Body.removeChild(erroSpan)

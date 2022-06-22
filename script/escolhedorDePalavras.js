@@ -2,7 +2,6 @@ export function escolhedorDePalavras(array) {
   if (array) {
     var bibliotecaDePalavras = organizadorDeTexto(array);
     var numeroDaVez = Math.floor(Math.random() * bibliotecaDePalavras.length);
-    console.log(bibliotecaDePalavras[numeroDaVez], "library")
     return bibliotecaDePalavras[numeroDaVez];
   } else{return array = textoTeste}
 }

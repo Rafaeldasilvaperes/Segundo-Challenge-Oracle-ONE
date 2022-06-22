@@ -15,7 +15,7 @@ export function perdeu(array) {
     blockClick();
     popupWinOrLose("PERDEU!","P");
     limpador()
-    console.log("PERDEU")
+    
     return;
   }
 }

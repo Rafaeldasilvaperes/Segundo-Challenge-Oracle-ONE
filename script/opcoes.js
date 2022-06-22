@@ -10,7 +10,7 @@ export function opcoes(){
     texto.value = '';
     blur.classList.toggle('active');
     pop.classList.toggle('active');
-    console.log(blur, pop)
+  
 }
 
 

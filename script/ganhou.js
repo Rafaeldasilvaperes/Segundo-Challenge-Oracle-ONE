@@ -6,7 +6,7 @@ import { popupWinOrLose } from './ganhouOuPerdeuPopup.js'
 
 export function ganhou() {
     ganhado = true;
-    console.log("GANHOU")
+    
     teclada.setAttribute("readonly", false);
     popupWinOrLose("VENCEU!", "G")
     

@@ -36,7 +36,7 @@ function verificaEntrada(evento) {
       // Então adiciona letra na tela e encaixa a letra na posição atual na var Arr
       if (charTexto === charEntrada && charEntrada !== arrNormalized) {
 
-        console.log("Char: ",charEntrada,"arr: ", arr[i])
+        
         arr.splice(i, 1, palavraDaVez[i]);
         adicionadorLetraCerta(i, palavraDaVez[i]);
         score() 
@@ -49,14 +49,12 @@ function verificaEntrada(evento) {
         geradorDeSVG();
 
         adicionaLetrasErradas(char);
-        console.log(letrasErradas);
+        
         perdeu(letrasErradas);
         return
       }
 
       if (palavraDaVez == arr.join("")) {
-        console.log("palavradavez: ",palavraDaVez);
-        console.log("arr: ",arr.join(""));
         ganhou();
         return
       }
@@ -98,7 +96,7 @@ window.addEventListener("keydown", verificaEntrada, false);
 // Entrada pelo teclado virtual
 document.addEventListener("click", function (evento) {
   if (evento.target.matches("[data-key]")) {
-    console.log(evento)
+  
     evento.keyCode = evento.target.dataset.key.charCodeAt(0);
     evento.key = evento.target.dataset.key;
     return verificaEntrada(evento);

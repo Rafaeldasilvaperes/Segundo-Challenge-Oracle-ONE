@@ -11,7 +11,7 @@ import { textoDefault } from './textoDefault.js'
 import { geradorDeSVG } from './adicionaSVGaoErrar.js'
 import { checaFinalDePagina } from './checaFinalDePagina.js'
 import { score } from './score.js'
-
+import { LinkClick } from './Links.js'
 
 
 
